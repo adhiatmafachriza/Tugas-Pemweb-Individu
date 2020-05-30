@@ -1,0 +1,736 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
+}
+
+img {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.container {
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+    grid-row-gap: 100px;
+}
+
+/* NAVBAR */
+.sticky {
+    position: fixed;
+    top: -70;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    border-bottom: 1px solid gainsboro;
+    z-index: 1;
+}
+
+.sticky + .home-wrap {
+    padding-top: 200px;
+}
+
+.navbar-wrap {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.navbar {
+    grid-column: 1/2;
+    justify-self: center;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+.nav-link {
+    margin: 35px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-link:hover {
+    border-bottom: 3px solid black;
+    transition: 0.2s;
+}
+
+/* HOME */
+.home-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.home-title {
+    grid-row: 2/3;
+    grid-column: 1/4;
+    justify-self: center;
+    align-self: center;
+}
+
+.home-title h1 {
+    letter-spacing: 10px;
+    font-size: 48px;
+}
+
+.home-image {
+    justify-self: center;
+    grid-row: 1/4;
+    grid-column: 2/3;
+    z-index: -1;
+}
+
+.home-image img {
+    padding-bottom: 10px;
+    border: 1px solid black;
+}
+
+/* ABOUT */
+.about-wrap {
+    display: grid;
+    grid-template-columns: 1fr 40% 30% 1fr;
+    grid-template-rows: 10% 1fr 10%;
+    padding-top: 40px;
+}
+
+.about-background {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.about-background img {
+    width: 70%;
+    justify-self: end;
+}
+
+.about-background img:hover {
+    opacity: 0.7;
+}
+
+.about-content {
+    text-align: justify;
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.about-content p {
+    font-family: 'PT Serif', serif;
+}
+
+.about-title {
+    letter-spacing: 5px;
+}
+
+/* PROJECT */
+.project-wrap {
+    display: grid;
+    grid-template-rows: 10% 1fr 1fr 1fr 10%;
+    grid-template-columns: 1fr 40% 10% 30% 1fr;
+    padding-top: 40px;
+}
+
+.project-image {
+    grid-row: 2/5;
+    grid-column: 2/3;
+}
+
+.project-header {
+    grid-row: 2/3;
+    grid-column: 3/5;
+    letter-spacing: 7px;
+    font-size: 38px;
+    align-self: flex-end;
+}
+
+.project-nav {
+    grid-row: 4/5;
+    grid-column: 3/4;
+    align-self: flex-end;
+}
+
+.project-nav ul li .icon {
+    display: none;
+}
+
+.project-content {
+    grid-row: 4/5;
+    grid-column: 4/5;
+    align-self: flex-end;
+    text-align: justify;
+    font-family: 'PT Serif', serif;
+}
+
+.project-content h3 {
+    letter-spacing: 3px;
+}
+
+.project-content p {
+    font-size: 18px;
+}
+
+.project-nav ul li {
+    list-style-type: none;
+}
+
+.project-nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-family: 'PT Serif', serif;
+    cursor: pointer;
+}
+
+.project-nav ul li a:hover {
+    border-bottom: 1px solid black;
+    transition: 0.2s;
+}
+
+.project-image img:hover {
+    opacity: 0.7;
+}
+
+/* CURRICULUM VITAE */
+.cv-wrap {
+    display: grid;
+    grid-template-columns: 1fr 40% 10% 40% 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    padding-top: 40px;
+}
+
+.cv-title {
+    text-align: center;
+    letter-spacing: 7px;
+    grid-row: 2/3;
+    grid-column: 2/5;
+    font-size: 32px;
+}
+
+.cv-image {
+    grid-row: 3/4;
+    grid-column: 3/4;
+}
+
+.cv-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.cv-education {
+    grid-row: 4/5;
+    grid-column: 4/5;
+    align-self: flex-end;
+}
+
+.cv-education ul li {
+    font-family: 'PT Serif', serif;
+}
+
+.cv-personal-data {
+    grid-row: 5/6;
+    grid-column: 2/3;
+    align-self: center;
+    text-align: right;
+}
+
+.cv-personal-data p {
+    font-family: 'PT Serif', serif;
+}
+
+.cv-skills {
+    grid-row: 6/7;
+    grid-column: 4/5;
+    align-self: flex-end;
+}
+
+.cv-skills ul li {
+    font-family: 'PT Serif', serif;
+}
+
+.cv-line {
+    grid-row: 4/7;
+    grid-column: 3/4;
+    justify-self: center;
+    align-self: flex-end;
+}
+
+.cv-line hr {
+    height: 380px;
+    width: 1px;
+    background-color: #000;
+}
+
+/* FOOTER */
+.footer-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #f2f2f2;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 40px;
+}
+
+.footer-text {
+    font-size: 14px;
+    margin: 5px;
+    justify-self: center;
+}
+
+@media screen and (max-width: 767px){
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: 'Libre Baskerville', serif;
+    }
+    
+    img {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        display: block;
+    }
+    
+    .container {
+        display: grid;
+        grid-auto-rows: minmax(100px, auto);
+        grid-row-gap: 100px;
+    }
+
+    .navbar-wrap {
+        margin-top: 70px;
+    }
+    
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-self: center;
+    }
+
+    .navbar a:not(:last-child) {
+        display: none;
+    }
+
+    .navbar .icon {
+        display: block;
+    }
+    
+    .nav-link {
+        margin: 20px;
+        padding: 0px;
+        text-decoration: none;
+        color: #000;
+        text-align: center;
+    }
+
+    .navbar.responsive a {
+        display: block;
+        float: none;
+    }
+
+    .navbar.responsive a:hover {
+        border-bottom: 0px solid black;
+    }
+
+    /* HOME */
+    .home-wrap {
+        display: grid;
+        grid-template-columns: 20% 1fr 20%;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .home-title {
+        grid-row: 2/3;
+        grid-column: 1/4;
+        justify-self: center;
+    }
+
+    .home-title h1 {
+        letter-spacing: 3px;
+        font-size: 18px;
+    }
+
+    /* ABOUT */
+    .about-wrap {
+        display: grid;
+        grid-template-columns: 10% 1fr 10%;
+        grid-template-rows: auto;
+        padding-top: 40px;
+    }
+
+    .about-background {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .about-background img {
+        width: 70%;
+        justify-self: end;
+    }
+
+    .about-content {
+        text-align: justify;
+        grid-column: 2/3;
+    }
+
+    .about-content p {
+        font-family: 'PT Serif', serif;
+    }
+
+    .about-title {
+        letter-spacing: 5px;
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    /* PROJECT */
+    .project-wrap {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 10% 1fr 10%;
+        padding-top: 40px;
+    }
+
+    .project-image {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        margin-top: 30px;
+    }
+
+    .project-header {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        letter-spacing: 5px;
+        font-size: 32px;
+        justify-self: center;
+    }
+
+    .project-nav {
+        grid-row: 3/4;
+        grid-column: 2/3;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .project-nav li:not(:last-child) {
+        display: none;
+    }
+
+    .project-nav ul li .icon {
+        display: block;
+    }
+
+    .project-nav ul li .icon:hover {
+        border: none;
+    }
+
+    .project-nav.project-responsive ul li {
+        display: block;
+        float: none;
+    }
+
+    .project-nav.project-responsive ul li .icon {
+        margin-top: 20px;
+    }
+
+    .project-nav.project-responsive li:first-child {
+        margin-top: 20px;
+    }
+
+    .project-content {
+        grid-row: 4/5;
+        grid-column: 2/3;
+        align-self: flex-end;
+        text-align: justify;
+        font-family: 'PT Serif', serif;
+    }
+
+    .project-content h3 {
+        letter-spacing: 3px;
+        text-align: center;
+    }
+
+    .project-content p {
+        font-size: 16px;
+    }
+
+    /* CURRICULUM VITAE */
+    .cv-wrap {
+        display: grid;
+        grid-template-columns: 10% 1fr 10%;
+        grid-template-rows: auto;
+        grid-row-gap: 50px;
+        padding-top: 40px;
+    }
+    
+    .cv-title {
+        text-align: center;
+        letter-spacing: 5px;
+        grid-row: 1/2;
+        grid-column: 2/3;
+        font-size: 28px;
+    }
+    
+    .cv-image {
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+    
+    .cv-image img {
+        width: 40%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .cv-personal-data {
+        grid-row: 3/4;
+        grid-column: 2/3;
+        text-align: center;
+    }
+    
+    .cv-personal-data p {
+        font-family: 'PT Serif', serif;
+    }
+    
+    .cv-education {
+        grid-row: 4/5;
+        grid-column: 2/3;
+        text-align: center;
+    }
+    
+    .cv-education ul li {
+        font-family: 'PT Serif', serif;
+        list-style-type: none;
+    }
+    
+    .cv-skills {
+        grid-row: 5/6;
+        grid-column: 2/3;
+        text-align: center;
+    }
+    
+    .cv-skills ul li {
+        font-family: 'PT Serif', serif;
+        list-style-type: none;
+    }
+    
+    .cv-line {
+        display: none;
+    }
+    
+    .cv-line hr {
+        display: none;
+    }
+
+    /* FOOTER */
+    .footer-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-row-gap: 5px;
+    }
+
+    .footer-text {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .home-title h1 {
+        font-size: 32px;
+    }
+
+    /* ABOUT */
+    .about-wrap {
+        display: grid;
+        grid-template-columns: 10% 1fr 10%;
+        grid-template-rows: auto;
+        padding-top: 40px;
+    }
+
+    .about-background {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .about-background img {
+        width: 50%;
+        justify-self: end;
+    }
+
+    .about-background img:hover {
+        opacity: 0.7;
+    }
+
+    .about-content {
+        text-align: justify;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        margin-top: 25px;
+    }
+
+    .about-content h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .about-content p {
+        font-family: 'PT Serif', serif;
+    }
+
+    .about-title {
+        letter-spacing: 5px;
+    }
+
+    /* PROJECT */
+    .project-wrap {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 10% 1fr 10%;
+        padding-top: 40px;
+    }
+
+    .project-image {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        margin-top: 30px;
+    }
+
+    .project-header {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        letter-spacing: 5px;
+        font-size: 40px;
+        justify-self: center;
+    }
+
+    .project-nav {
+        grid-row: 3/4;
+        grid-column: 2/3;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .project-nav li:not(:last-child) {
+        display: none;
+    }
+
+    .project-nav ul li .icon {
+        display: block;
+    }
+
+    .project-nav ul li .icon:hover {
+        border: none;
+    }
+
+    .project-nav.project-responsive ul li {
+        display: block;
+        float: none;
+    }
+
+    .project-nav.project-responsive ul li .icon {
+        margin-top: 20px;
+    }
+
+    .project-nav.project-responsive li:first-child {
+        margin-top: 20px;
+    }
+
+    .project-content {
+        grid-row: 4/5;
+        grid-column: 2/3;
+        align-self: flex-end;
+        text-align: justify;
+        font-family: 'PT Serif', serif;
+    }
+
+    .project-content h3 {
+        letter-spacing: 3px;
+        text-align: center;
+    }
+
+    .project-content p {
+        font-size: 16px;
+    }
+
+    /* CURRICULUM VITAE */
+    .cv-wrap {
+        display: grid;
+        grid-template-columns: 10% 1fr 10%;
+        grid-template-rows: auto;
+        grid-row-gap: 50px;
+        padding-top: 40px;
+    }
+    
+    .cv-title {
+        text-align: center;
+        letter-spacing: 5px;
+        grid-row: 1/2;
+        grid-column: 2/3;
+        font-size: 28px;
+    }
+    
+    .cv-image {
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+    
+    .cv-image img {
+        width: 30%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .cv-personal-data {
+        grid-row: 3/4;
+        grid-column: 2/3;
+        text-align: center;
+    }
+    
+    .cv-personal-data p {
+        font-family: 'PT Serif', serif;
+    }
+    
+    .cv-education {
+        grid-row: 4/5;
+        grid-column: 2/3;
+        text-align: center;
+    }
+    
+    .cv-education ul li {
+        font-family: 'PT Serif', serif;
+        list-style-type: none;
+    }
+    
+    .cv-skills {
+        grid-row: 5/6;
+        grid-column: 2/3;
+        text-align: center;
+    }
+    
+    .cv-skills ul li {
+        font-family: 'PT Serif', serif;
+        list-style-type: none;
+    }
+    
+    .cv-line {
+        display: none;
+    }
+    
+    .cv-line hr {
+        display: none;
+    }
+}
